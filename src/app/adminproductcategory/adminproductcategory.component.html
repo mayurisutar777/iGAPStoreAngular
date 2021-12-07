@@ -1,0 +1,31 @@
+        <div class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb-inner">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="#">Admin</a></li>
+                        <li class='active'>Product Categories</li>
+                    </ul>
+                </div><!-- /.breadcrumb-inner -->
+            </div><!-- /.container -->
+        </div><!-- /.breadcrumb -->
+
+<div class="body-content">
+    <div class="container">
+        <div class="checkout-box ">
+            <div class="row">
+                <div class="col-lg-12">	
+                    <h2>Product Categories</h2>		
+                    <form class="register-form" role="form" [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" formControlName="id"/> 
+                            <input type="text" class="form-control" formControlName="name"/> 
+                        </div>
+                        <br />
+                        <button type="submit" [disabled]="!formdata.valid" class="btn-upper btn btn-primary checkout-page-button">Save</button>
+                        <br /><br />
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+
+   
+<div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-inner">
+        <ul class="list-inline list-unstyled">
+          <li><a href="#">Admin</a></li>
+          <li class='active'>Slider</li>
+        </ul>
+      </div><!-- /.breadcrumb-inner -->
+    </div><!-- /.container -->
+  </div><!-- /.breadcrumb -->
+  
+  <div class="body-content">
+    <div class="container">
+      <div class="checkout-box ">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Slider</h2>
+            <form class="register-form" role="form" [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
+              <input type="hidden" class="form-control" formControlName="id" />
+              <div class="form-group">
+                Small Title
+                <input type="text" class="form-control" formControlName="smalltitle" />
+              </div>
+              <div class="form-group">
+                Title
+                <input type="text" class="form-control" formControlName="title" />
+              </div>
+              <div class="form-group">
+                Description
+                <input type="text" class="form-control" formControlName="description" />
+              </div>
+              <div class="form-group">
+                Link To Open
+                <input type="text" class="form-control" formControlName="linktopen" />
+              </div>
+              <div class="form-group">
+                Image
+                <input type="file" class="form-control" accept="image/png, image/jpeg" (change)="handleUpload($event)" formControlName="image" />
+              </div>
+              <br />
+              <button type="submit" [disabled]="!formdata.valid" class="btn-upper btn btn-primary checkout-page-button">Save</button>
+              <br /><br />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
